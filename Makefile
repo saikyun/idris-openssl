@@ -1,10 +1,7 @@
-all: idrssl.o
+all: idrssl.c idrssl.h
 
-build-test: Test.idr idrssl.o
+build-test: Test.idr idrssl.c idrssl.h
 	idris Test.idr -o test --warnreach --package contrib
-
-idrssl.o: idrssl.c idrssl.h
-	gcc -O2 -shared -o idrssl.o idrssl.c -lssl -lcrypto
 
 test: build-test
 	./test

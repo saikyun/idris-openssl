@@ -5,4 +5,4 @@ pkgs = contrib
 modules = Idrssl
 
 makefile = Makefile
-objs = idrssl.o, idrssl.h
+objs = idrssl.c, idrssl.h

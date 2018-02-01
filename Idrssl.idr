@@ -2,7 +2,9 @@ module Idrssl
 import Network.Socket
 
 %include C "idrssl.h"
-%link C "idrssl.o"
+%include C "idrssl.c"
+
+%flag C "-lssl -lcrypto"
 
 %access export
       
