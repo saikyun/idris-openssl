@@ -19,9 +19,14 @@ idris --install idrssl.ipkg
 ```
 
 # Usage
+Import the lib:
+```
+import Idrssl
+```
+
 Create a Socket using Network.Socket (https://www.idris-lang.org/docs/0.12/contrib_doc/docs/Network.Socket.html)
 Run the following functions
-where sock is the socket you created
+where sock is the socket you created.
 ```
 connect sock (Hostname "www.google.com") 443
 ctx <- sslCtxNex
