@@ -32,8 +32,8 @@ connect sock (Hostname "www.google.com") 443
 ctx <- sslCtxNex
 ssl <- sslNew ctx
 sslConnect ssl sock
+sslWrite ssl "GET / HTTP/1.1\r\nHost: www.google.com\r\n\r\n"
 Right msg <- sslRead 1024 | Left err => do sslClose ssl ctx; close sock
-sslWrite ssl "ping"
 sslClose ssl ctx
 close sock
 ```
