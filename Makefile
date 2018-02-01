@@ -1,5 +1,3 @@
-all: idrssl.c idrssl.h
-
 build-test: Test.idr idrssl.c idrssl.h
 	idris Test.idr -o test --warnreach --package contrib
 
