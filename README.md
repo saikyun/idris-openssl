@@ -11,16 +11,10 @@ These are currently implemented:
 * openssl (I used 1.0.2n on OSX installed through homebrew) (https://github.com/openssl/openssl)
 
 # Test
-You can try the library out by first compiling the c-files:
+You can test the library by first compiling the c-files & running the test (Test.idr) which fetches a part of duckduckgo.com:
+```
+make test
+```
 
-```
-gcc -shared -o idrssl.o idrssl.c -lssl -lcrypto
-```
-
-Then running the main in Test.idr, which will make a http-request to duckduckgo.com
-
-```
-idris Test.idr --package contrib -o test && ./test
-```
 # Thanks
 Thanks to fugu2 and tux3do for providing a compilable ssl client example: https://ubuntuforums.org/showthread.php?t=2217101
