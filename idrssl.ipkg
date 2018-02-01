@@ -1,0 +1,8 @@
+package idrssl
+
+pkgs = contrib
+
+modules = Idrssl
+
+makefile = Makefile
+objs = idrssl.o, idrssl.h
